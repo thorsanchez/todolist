@@ -1,7 +1,7 @@
 import React from "react";
 import ToDoItem from "./ToDoItem";
 
-function TodoList({ todos, deleteTodo}) {
+function TodoList({ todos, deleteTodo, toggleComplete}) {
     return (
         <ul>
             {/*loopa yfir hvert todo inni todos fylki*/}
@@ -10,7 +10,8 @@ function TodoList({ todos, deleteTodo}) {
                 key={index}
                 index={index}
                 todo={todo}
-                deleteTodo ={deleteTodo}/>
+                deleteTodo ={deleteTodo}
+                toggleComplete={toggleComplete}/>
             ))}
         </ul>
     )
